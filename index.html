@@ -26,10 +26,22 @@
       height: 100vh;
       text-align: center;
       padding: 20px;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in-out forwards;
+      transition: background-image 1s ease-in-out;
     }
 
-    h1,
-    h2 {
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    h1, h2, .contador {
+      transition: all 0.5s ease;
+    }
+
+    h1, h2 {
       font-size: 3em;
       color: #4b1e1e;
       background-color: rgba(206, 206, 206, 0.8);
@@ -50,14 +62,13 @@
       margin-top: 20px;
     }
 
-    /* MEDIA QUERY PARA CELULARES */
     @media (max-width: 600px) {
       body {
         background-image: url('nandinho-mobile.png');
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        background-attachment: scroll; /* remove o fixed no mobile */
+        background-attachment: scroll;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -67,8 +78,7 @@
         padding: 40px 20px;
       }
 
-      h1,
-      h2 {
+      h1, h2 {
         font-size: 2em;
         padding: 15px 20px;
         margin: 10px 0;
