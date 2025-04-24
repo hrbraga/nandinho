@@ -13,8 +13,11 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background: url('nandinho.png') no-repeat center center fixed;
+      background-image: url('nandinho.png');
       background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       color: #3c2f2f;
       display: flex;
       flex-direction: column;
@@ -48,10 +51,13 @@
     }
 
     /* MEDIA QUERY PARA CELULARES */
-    @media (max-width: 720px) {
+    @media (max-width: 600px) {
       body {
-        background: url('nandinho-mobile.png') no-repeat center center fixed;
+        background-image: url('nandinho-mobile.png');
         background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: scroll; /* remove o fixed no mobile */
         height: 100vh;
         display: flex;
         flex-direction: column;
